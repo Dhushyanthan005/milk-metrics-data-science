@@ -1,0 +1,153 @@
+{
+  "dataset_summary": {
+    "total_records": 250000,
+    "total_columns": 37,
+    "missing_values_count": 0,
+    "duplicate_rows": 0,
+    "target_variable": "Milk_Yield_L",
+    "prev_yield_corr": 0.9684473052808247,
+    "mean_abs_diff": 1.1685166400000002
+  },
+  "experiment_a": {
+    "name": "With Previous_Week_Avg_Yield",
+    "train_mae": 1.0289928758727447,
+    "train_rmse": 1.2902428681982838,
+    "train_r2": 0.9499042011044831,
+    "test_mae": 1.057789627840817,
+    "test_rmse": 1.3269031196759122,
+    "test_r2": 0.9469047186996762,
+    "top15_features": [
+      {
+        "feature": "Previous_Week_Avg_Yield",
+        "importance": 0.9715927243232727
+      },
+      {
+        "feature": "Breed",
+        "importance": 0.004826453514397144
+      },
+      {
+        "feature": "Lactation_Stage",
+        "importance": 0.0033863757271319628
+      },
+      {
+        "feature": "Days_in_Milk",
+        "importance": 0.002303323009982705
+      },
+      {
+        "feature": "Age_Months",
+        "importance": 0.0016501030186191201
+      },
+      {
+        "feature": "Housing_Score",
+        "importance": 0.001590044004842639
+      },
+      {
+        "feature": "Ambient_Temperature_C",
+        "importance": 0.0013701505959033966
+      },
+      {
+        "feature": "Feed_Quantity_kg",
+        "importance": 0.0011730416445061564
+      },
+      {
+        "feature": "IBR_Vaccine",
+        "importance": 0.0005985021707601845
+      },
+      {
+        "feature": "Country",
+        "importance": 0.0005831131711602211
+      },
+      {
+        "feature": "Rabies_Vaccine",
+        "importance": 0.0005760436761192977
+      },
+      {
+        "feature": "Walking_Distance_km",
+        "importance": 0.0005635613924823701
+      },
+      {
+        "feature": "Water_Intake_L",
+        "importance": 0.0005362039664760232
+      },
+      {
+        "feature": "BQ_Vaccine",
+        "importance": 0.0005297469324432313
+      },
+      {
+        "feature": "Feed_Type",
+        "importance": 0.0005251865950413048
+      }
+    ]
+  },
+  "experiment_b": {
+    "name": "Without Previous_Week_Avg_Yield",
+    "train_mae": 2.452524815199983,
+    "train_rmse": 3.190388238901724,
+    "train_r2": 0.6937010953393377,
+    "test_mae": 2.536576501105976,
+    "test_rmse": 3.3027859674715376,
+    "test_r2": 0.6710435871227186,
+    "top15_features": [
+      {
+        "feature": "Breed",
+        "importance": 0.4581919312477112
+      },
+      {
+        "feature": "Lactation_Stage",
+        "importance": 0.20199832320213318
+      },
+      {
+        "feature": "Days_in_Milk",
+        "importance": 0.09858472645282745
+      },
+      {
+        "feature": "Age_Months",
+        "importance": 0.054606031626462936
+      },
+      {
+        "feature": "Housing_Score",
+        "importance": 0.04172311723232269
+      },
+      {
+        "feature": "Ambient_Temperature_C",
+        "importance": 0.02794092893600464
+      },
+      {
+        "feature": "Feed_Quantity_kg",
+        "importance": 0.025120487436652184
+      },
+      {
+        "feature": "HS_Vaccine",
+        "importance": 0.006048126146197319
+      },
+      {
+        "feature": "Feeding_Frequency",
+        "importance": 0.00517296651378274
+      },
+      {
+        "feature": "Country",
+        "importance": 0.004251051228493452
+      },
+      {
+        "feature": "Rabies_Vaccine",
+        "importance": 0.004097075667232275
+      },
+      {
+        "feature": "Walking_Distance_km",
+        "importance": 0.004008390475064516
+      },
+      {
+        "feature": "Humidity_percent",
+        "importance": 0.003932018764317036
+      },
+      {
+        "feature": "Feed_Type",
+        "importance": 0.0038730704691261053
+      },
+      {
+        "feature": "Grazing_Duration_hrs",
+        "importance": 0.0037743025459349155
+      }
+    ]
+  }
+}

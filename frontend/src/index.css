@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-secondary: #3b82f6;
+  --color-brand-dark: #1e293b;
+}
+
+:root {
+  --color-brand-primary: #2563eb;
+  --color-brand-hover: #1d4ed8;
+  --color-brand-bg-alpha: rgba(37, 99, 235, 0.1);
+  --color-brand-success: #10b981;
+  --color-brand-warning: #f59e0b;
+  --color-brand-danger: #ef4444;
+  
+  --bg-primary: #f8fafc;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #64748b;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+  --glow-opacity: 0.1;
+}
+
+/* Maintain dark theme consistently */
+:root.dark {
+  --color-brand-primary: #2563eb;
+  --color-brand-hover: #3b82f6;
+  --color-brand-bg-alpha: rgba(37, 99, 235, 0.2);
+  --color-brand-success: #10b981;
+  --color-brand-warning: #f59e0b;
+  --color-brand-danger: #ef4444;
+  
+  --bg-primary: #0f172a;
+  --bg-sidebar: #111827;
+  --bg-card: #1e293b;
+  --border-color: #334155;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --glow-opacity: 0.3;
+}
+
+/* Theme accent color overrides */
+:root.theme-emerald { 
+  --color-brand-primary: #10b981; 
+  --color-brand-hover: #059669; 
+  --color-brand-bg-alpha: rgba(16, 185, 129, 0.15);
+}
+:root.theme-cyan { 
+  --color-brand-primary: #06b6d4; 
+  --color-brand-hover: #0891b2; 
+  --color-brand-bg-alpha: rgba(6, 182, 212, 0.15);
+}
+:root.theme-indigo { 
+  --color-brand-primary: #6366f1; 
+  --color-brand-hover: #4f46e5; 
+  --color-brand-bg-alpha: rgba(99, 102, 241, 0.15);
+}
+:root.theme-amber { 
+  --color-brand-primary: #f59e0b; 
+  --color-brand-hover: #d97706; 
+  --color-brand-bg-alpha: rgba(245, 158, 11, 0.15);
+}
+:root.theme-rose { 
+  --color-brand-primary: #f43f5e; 
+  --color-brand-hover: #e11d48; 
+  --color-brand-bg-alpha: rgba(244, 63, 94, 0.15);
+}
+
+.sidebar-link-active {
+  background-color: var(--color-brand-bg-alpha);
+  color: var(--color-brand-primary);
+  border: 1px solid var(--color-brand-primary);
+}
+
+.model-status-badge {
+  background-color: var(--color-brand-bg-alpha);
+  border: 1px solid var(--color-brand-primary);
+  color: var(--color-brand-primary);
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clean layout utilities - flat cards with soft shadows instead of glassmorphism */
+.glass {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+}
+
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-primary);
+}
